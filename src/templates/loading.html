@@ -1,0 +1,9 @@
+<div class="container mt-5 text-center">
+    <h1>Processing Your Task</h1>
+    <div class="spinner-border text-success mt-4" role="status">
+        <span class="visually-hidden">Loading...</span>
+    </div>
+    <p class="mt-4">Request ID: <span id="reqId" class="font-monospace">{{.}}</span></p>
+    <div id="logs" hx-get="/logs?reqId={{.}}" hx-trigger="load, every 2s" hx-target="#logs" class="mt-4">
+    </div>
+</div>
